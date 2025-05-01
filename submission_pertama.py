@@ -301,7 +301,7 @@ print(f"Model terbaik berdasarkan akurasi adalah **{best_model_name}** dengan ak
 URL = "postgresql://postgres.umoicvvdhelmxiytovql:Napoleon007@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres"
 
 engine = create_engine(URL)
-jayaMaju_df.to_sql('Attrition', engine)
+jayaMaju_df.to_sql('AttritionRate', engine)
 
 """# **requirements**"""
 
