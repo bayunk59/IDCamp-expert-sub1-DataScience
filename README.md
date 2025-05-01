@@ -17,28 +17,8 @@ Berikut beberapa cakupan proyek ini:
 
 ### Persiapan
 
+Pada proyek ini saya akan menentukan
 Sumber data: "https://raw.githubusercontent.com/dicodingacademy/dicoding_dataset/main/employee/employee_data.csv"
-
-Setup environment:
-
-```
-!pip install pandas sqlalchemy
-from sqlalchemy import create_engine
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.preprocessing import PowerTransformer
-import joblib
-from sklearn.cluster import KMeans
-from sklearn.metrics import silhouette_score
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
-```
 
 ## Business Dashboard
 
@@ -47,6 +27,9 @@ Dashboard tersebut menampilkan jumlah pegawai yang melakukan `Attrition` dan jug
 
 ## Conclusion
 
+Pada proyek ini ditemukan 412 data yang `missing value` pada kolom `Attrition`, langkah yang saya ambil selanjutnya adalah menghapus 412 data tersebut karena jumlah data yang tersisa masih cukup banyak dengan jumlah 1058 data.
+
+Selanjutnya data saya bagi menjadi 2 berdasarkan type nya, yakni numerik dan kategorik dengan rincian 27 data numerik dan 8 data kategorik. Pada data numerik ini saya lakukan uji korelasi untuk meliihat hubungannya dengan `Attrition`.
 Saat dilakukan uji korelasi ada beberapa faktor yang mempengaruhi nilai `Attrition` pada perusahaan tersebut, yaitu:
 
 1. `Age` -0.17
@@ -61,5 +44,9 @@ Saat dilakukan uji korelasi ada beberapa faktor yang mempengaruhi nilai `Attriti
 10. `YearsInCurrentRole` -0.16
 11. `YearsWithCurrManager` -0.16
 12. `DistanceFromHome` +0.08
+
+Saya hapus beberapa data yang tidak ada hubungannya dengan `Attrition` dan saya lakukan modelling. dari ketiga model yang saya gunakan, logistic regression memberikan akurasi tertinggi dengan nilai 87%.
+
+Berdasarkan
 
 ### Rekomendasi Action Items (Optional)
