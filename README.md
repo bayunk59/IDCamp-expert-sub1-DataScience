@@ -17,8 +17,21 @@ Berikut beberapa cakupan proyek ini:
 
 ### Persiapan
 
-Pada proyek ini saya akan menentukan
 Sumber data: "https://raw.githubusercontent.com/dicodingacademy/dicoding_dataset/main/employee/employee_data.csv"
+
+Setup environment:
+
+1. Buat virtual environment
+   `python -m venv env`
+
+2. Aktifkan environment
+   `env\Scripts\activate`
+
+3. Install semua library dari file `requirement.txt`
+   `pip install -r requirements.txt`
+
+4. Jalankan skripnya
+   `python <nama file>.py`
 
 ## Business Dashboard
 
@@ -30,6 +43,7 @@ Dashboard tersebut menampilkan jumlah pegawai yang melakukan `Attrition` dan jug
 Pada proyek ini ditemukan 412 data yang `missing value` pada kolom `Attrition`, langkah yang saya ambil selanjutnya adalah menghapus 412 data tersebut karena jumlah data yang tersisa masih cukup banyak dengan jumlah 1058 data.
 
 Selanjutnya data saya bagi menjadi 2 berdasarkan type nya, yakni numerik dan kategorik dengan rincian 27 data numerik dan 8 data kategorik. Pada data numerik ini saya lakukan uji korelasi untuk meliihat hubungannya dengan `Attrition`.
+
 Saat dilakukan uji korelasi ada beberapa faktor yang mempengaruhi nilai `Attrition` pada perusahaan tersebut, yaitu:
 
 1. `Age` -0.17
@@ -45,8 +59,8 @@ Saat dilakukan uji korelasi ada beberapa faktor yang mempengaruhi nilai `Attriti
 11. `YearsWithCurrManager` -0.16
 12. `DistanceFromHome` +0.08
 
-Saya hapus beberapa data yang tidak ada hubungannya dengan `Attrition` dan saya lakukan modelling. dari ketiga model yang saya gunakan, logistic regression memberikan akurasi tertinggi dengan nilai 87%.
+Berdasarkan data tersebut terdapat 1 variabel yaitu `DistanceFromHome` yang menunjukkan nilai korelasi positif sebesar +0.08, yang mengindikasikan bahwa semakin jauh rumah karyawan ke tempat kerja, semakin besar kemungkinan karyawan yang melakukan `Attrition`
 
-Berdasarkan
+Berdasrkan hasil korelasi itu juga dapat disimpulkan bahwa faktor-faktor yang berhubungan dengan kepuasan kerja, pengalaman kerja, serta kompensasi memiliki kontribusi penting dalam memengaruhi tingkat `attrition` di perusahaan. Oleh karena itu, perusahaan dapat mempertimbangkan peningkatan kepuasan kerja, penyesuaian kompensasi, dan program loyalitas karyawan sebagai strategi untuk menurunkan tingkat `attrition`.
 
 ### Rekomendasi Action Items (Optional)
